@@ -1,0 +1,75 @@
+<script>
+
+/*class student{
+
+    constructor(name,age,cls)
+    {
+        this.name_=name;
+        this.age_=age;
+        this.cls_=cls;
+    }
+    biodata()
+    {
+        console.log(`Hi my name is ${this.name_}. I am ${this.age_} year old. I am in ${this.cls_}.`);
+    }
+}
+
+let obj1=new student('Bhargav',19,'BE');
+let obj2=new student('Dhruv',19,'MBBS');
+obj1.biodata();
+obj2.biodata();
+
+*/
+
+
+// Inharitance topic
+
+class student{
+
+    constructor(name,age,cls)
+    {
+        this.name_=name;
+        this.age_=age;
+        this.cls_=cls;
+    }
+
+    // instance method
+
+    biodata()
+    {
+        console.log(`Hi my name is ${this.name_}. I am ${this.age_} year old. I am in ${this.cls_}.`);
+        //we can return also
+    }
+
+    
+
+}
+
+
+class Player extends student{
+
+    constructor(name,age,cls,game){
+        super(name,age,cls)
+        this.mygame=game; // super() allows t use the parant class properties
+    }
+
+    biodata_()
+    {
+        console.log(`Hi my name is ${this.name_}. I am ${this.age_} year old. I am in ${this.cls_}. I love ${this.mygame}`);
+    }
+
+    /*
+        play_cric(){
+            return ${super.biodata()};
+        }
+    
+    */
+}
+
+let obj1=new Player('Bhargav',19,'BE','Cricket');
+
+
+obj1.biodata_();
+//console.log(obj1.play_cric());
+
+</script>

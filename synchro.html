@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>synchronous</title>
+
+    
+
+
+
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>uname</td>
+            <td><input type="text" ></td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="submit" id="btn"></td>
+        </tr>
+    </table>
+
+    <script>
+
+
+        const wait = () =>{
+            console.log('js is starting'); 
+            let start = new Date().getTime();
+            console.log(new Date().getTime() - start);
+
+            while(new Date().getTime() - start < 5000);
+            console.log('Its done')
+        }
+        btn.addEventListener('click', wait);
+        
+        </script>
+    
+</body>
+</html>
+

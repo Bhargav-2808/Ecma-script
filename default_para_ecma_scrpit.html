@@ -1,0 +1,43 @@
+<script>
+
+//es5
+
+/*function multi(a,b){
+    console.log(a*b); // NaN
+}
+multi(4);
+
+
+
+//es5
+function multi(a,b){
+    console.log(b); // undefined ,NaN
+    console.log(a*b);
+}
+multi(4);
+
+
+function multi(a,b){
+    b= (typeof b!=='undefined') ?b:1;
+    console.log(a*b);
+}
+multi(4);
+
+*/
+
+// es6
+/*
+function multi(a,b=4){
+    console.log(a*b); // NaN
+}
+*/
+
+const multi = (a,b=4)=>{
+    console.log(`multiplication of two numbers is ${a*b}`);
+}
+
+multi(4);
+
+
+
+</script>

@@ -1,0 +1,42 @@
+<script>
+//es5
+
+/*function sum(a,b,c,d,e)
+{
+    console.log(a+b+c+d+e); // we need two declare many parameter
+}
+
+sum(1,2,3,4,5);
+
+
+
+//es6
+
+function sum(...inputs)
+{
+    console.log(inputs); // if we need value of array then just write in .log(...inputs)
+    total=0;
+    for(let i of inputs)
+    {
+        total+=i;
+    }
+    console.log(total);
+}
+
+sum(1,2,3,4,5);
+
+*/
+
+function fun(a,b,...c)
+{
+    console.log(`${a} ${b}`);
+    console.log(c);
+    console.log(c[0]);
+    console.log(c.length);
+    console.log(c.indexOf('edan'));
+
+}
+fun('ronaldo','Neymar','pele','messi','Edan')
+
+
+</script>

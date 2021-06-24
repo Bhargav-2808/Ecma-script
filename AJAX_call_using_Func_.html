@@ -1,0 +1,42 @@
+<p id ="apidata">
+
+</p>
+
+
+<script>
+
+/*The fatch API
+the fetch api provide a fetch() method defined on the wiindow objet , which you can use to perform requests.
+
+This method returns promise that you can use to retrieve the response of the request
+
+*/
+
+function getcovidata(index_) {
+    fetch('https://api.covid19api.com/summary').then( (apidata)=> {
+  //  console.log(apidata);  // we get data usingthen method not convert it into an object
+    return apidata.json();  // .json method convert the json file into the javascript code basically the api data is in the json file
+
+}).then( (actual_data) => {
+    //console.log(actual_data);
+
+
+    const mydata = actual_data.Countries[`${index_}`];  // we are fetching perticular country
+
+
+    document.getElementById('apidata').innerHTML =` The name of the country is ${mydata.Country}. Total cases are ${mydata.TotalConfirmed}`;
+    
+   // console.log(` The name of the country is ${mydata.Country}. Total cases are ${mydata.TotalConfirmed}`);
+  
+
+}).catch ( (error_)=> {
+    console.log(error_);
+})
+   
+}
+
+getcovidata(20);
+getcovidata(120);
+
+
+</script>

@@ -1,0 +1,45 @@
+
+
+<script>
+
+
+// 2s roll no  use API
+// 2s using roll no got the age and name
+// after 2s using name got the gender
+
+const getroll_ = () =>{
+
+    setTimeout(() =>{
+
+        console.log('API');
+
+        let roll_num = [1,2,3,4,5];
+
+        console.log(roll_num);
+
+        setTimeout( (rollno) => {
+
+            const biodata = {
+                name :'Bhargav',
+                age :  19
+            }
+
+            console.log(`My name is ${biodata.name} and i am ${biodata.age} old my roll no is ${rollno}`);
+
+            setTimeout( (name) =>{
+
+                biodata.gender = 'Male';
+
+                console.log(`My name is ${biodata.name} and i am ${biodata.age} old my roll no is ${rollno} my gender is ${biodata.gender} .`);
+
+
+            },2000,biodata.name);
+
+        },2000,roll_num[1])
+
+    },2000);
+
+}
+getroll_();
+
+</script>

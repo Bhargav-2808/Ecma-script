@@ -1,0 +1,63 @@
+<script>
+//es5
+
+// It replace apply method
+/*
+function sum(a,b,c)
+{
+    console.log(a+b+c);
+}
+//sum(1,2,3);  normal method 
+
+var arrval=[1,2,3];  // using apply method
+sum.apply(null,arrval);
+
+
+
+//es6
+
+function sum(a,b,c)
+{
+    console.log(a+b+c);
+}
+
+var arrval=[1,2,3]; 
+console.log(...arrval);
+sum(...arrval); // spread operator
+
+
+// It replace concatenate
+
+let arr1 =[1,2,3];
+let arr2=[4,5,6];
+
+//arr1=arr1.concat(arr2); // normal method which is used in past
+
+arr1=[...arr1,...arr2]; // using spread operator // we can concat more than two array
+console.log(arr1);
+
+
+
+
+// it replace copy() method
+
+let arr1copy =[1,2,3];
+let arr2copy=arr1copy;
+
+//console.log(arr2copy); // old method
+
+arr2copy.push(4,5); // To insert an element
+console.log(arr2copy);
+
+console.log(arr1copy); // we have a problem that if we console arr1cop then we also get the same optput like [1,2,3,4,5] though we even did not copy any add any element in arr1copy
+
+*/
+
+//es6
+
+let arr1copy =[1,2,3];
+let arr3copy =[6,7,8];
+let arr2copy = [...arr1copy,4,5,...arr3copy,9];
+console.log(arr2copy);
+console.log(arr1copy); // problem sorted 
+</script>

@@ -1,0 +1,86 @@
+<script>
+
+const pobj1= new Promise( (resolve, reject) =>{
+
+setTimeout( () =>{
+
+    let roll_no =[1,2,3,4,5];
+    resolve(roll_no);
+
+    //reject('Error while communicting');
+
+},2000);
+
+} ); // whenevr you ca;l the promice as an object you mst call the function is called executers
+
+
+// here two method for promise then and catch 
+// here then method is similar to resolve when we got the data successfully 
+
+
+const getBiodata = (indexdata) =>{
+return new Promise( (resolve , reject) =>{
+
+    setTimeout( (indexdata) =>{
+        
+        let biodata = {
+            name : 'Bhargav',
+            age : 19
+        }
+
+        resolve(`My roll no is ${indexdata}. My name is ${biodata.name} and my age is ${biodata.age}`);
+    },2000,indexdata)
+
+});
+}
+
+//promise consume
+
+
+/*
+
+pobj1.then( (rollno) =>{
+
+console.log(rollno);
+
+return getBiodata(rollno[1])
+}).then( (kuchbhi) =>{
+console.log(kuchbhi);s
+})
+
+
+.catch( (error_) =>{
+
+console.log(error_);
+});
+
+*/
+
+
+async function getData(){            // the keuyword async means it can't return value it directly return the promise
+
+
+
+    
+        const rollnodata = await pobj1;
+        console.log(rollnodata);
+
+        const biodatas= await getBiodata(rollnodata[1]);
+        console.log(biodatas);
+
+
+         return biodatas;
+  
+   
+
+}
+
+const getname=getData().then( (myname) =>{
+    console.log(getname);
+});
+
+
+
+
+
+</script>
